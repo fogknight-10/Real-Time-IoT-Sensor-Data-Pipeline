@@ -1,0 +1,34 @@
+# Secrets and local configuration
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local data and runtime output (the data lake lives in Docker volumes or data/)
+data/
+checkpoints/
+logs/
+*.parquet
+*.log
+
+# Great Expectations local results (keep suites, ignore generated output)
+**/uncommitted/
+
+# Airflow runtime files
+airflow.db
+airflow-webserver.pid
+standalone_admin_password.txt
+
+# IDE and OS files
+.vscode/*
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
